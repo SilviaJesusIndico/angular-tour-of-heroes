@@ -10,6 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { GraficoComponent } from './grafico/grafico.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { GraficoComponent } from './grafico/grafico.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
+    LoginComponent,
     GraficoComponent
   ],
   bootstrap: [ AppComponent ]
