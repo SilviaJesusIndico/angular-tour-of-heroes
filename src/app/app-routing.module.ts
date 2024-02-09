@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './unlogged-area/login/login.component';
+import { LoginComponent } from './login/login.component';
 import { GraficoComponent } from './grafico/grafico.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -14,13 +14,13 @@ const routes: Routes = [
     component: UnloggedAreaComponent,
     canActivate: [ UnloggedGuardService ],
     children: [
-      {path: 'login', component: LoginComponent},
+      { path: 'login', component: LoginComponent },
     ]
   },
-  {
-    path: '',
-    component: LoggedAreaComponent,
-    //redirectTo: '/login', pathMatch: 'full' }, 
+  { 
+    path: '', 
+    component: LoggedAreaComponent, 
+    //redirectTo: '/login', pathMatch: 'full' },
     canActivate: [ LoggedGuardService ],
     children: [
       { path: 'dashboard', component: DashboardComponent },
@@ -28,7 +28,7 @@ const routes: Routes = [
       { path: 'heroes', component: HeroesComponent },
       { path: 'grafico', component: GraficoComponent }, 
     ]
-  },
+  }
 ];
 
 @NgModule({
