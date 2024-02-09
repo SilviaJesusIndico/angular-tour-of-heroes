@@ -10,23 +10,27 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { GraficoComponent } from './grafico/grafico.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './unlogged-area/login/login.component';
+import { LoggedAreaComponent } from './logged-area/logged-area.component';
+import { UnloggedAreaComponent } from './unlogged-area/unlogged-area.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   declarations: [
+    LoggedAreaComponent,
+    UnloggedAreaComponent,
     AppComponent,
     DashboardComponent,
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
     LoginComponent,
-    GraficoComponent
+    GraficoComponent,
   ],
   bootstrap: [ AppComponent ]
 })
